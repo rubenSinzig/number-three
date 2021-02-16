@@ -18,7 +18,15 @@ const wordConverterOne = (arr) => {
 };
 console.log(wordConverterOne(words));
 console.log("------------- Solution Two -------------");
-
+const wordConverterTwo = (arr) => {
+  let convertedWords = [];
+  for (let i = 0; i < arr.length; i++) {
+    convertedWords.push(`${arr[i]}er`);
+  }
+  return convertedWords;
+};
+console.log(wordConverterTwo(words));
 console.log("------------- Solution Three -------------");
-
+function wordConverterThree(arr) {}
+console.log(wordConverterThree(words));
 console.log("------------- Solution End -------------");
