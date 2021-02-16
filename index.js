@@ -10,8 +10,13 @@
 // **Expected output**
 // ["smarter", "kinder", "sweeter", "smaller", "clearer"];
 //
+const words = ["smart", "kind", "sweet", "small", "clear"];
+//
 console.log("------------- Solution One -------------");
-
+const wordConverterOne = (arr) => {
+  return arr.map((el, i) => `${el}er`);
+};
+console.log(wordConverterOne(words));
 console.log("------------- Solution Two -------------");
 
 console.log("------------- Solution Three -------------");
