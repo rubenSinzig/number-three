@@ -27,16 +27,15 @@ const wordConverterTwo = (arr) => {
 };
 console.log(wordConverterTwo(words));
 console.log("------------- Solution Three -------------");
-// Recursion doesn't work for me.
-/*
+const convertedWords = [];
 function wordConverterThree(arr) {
-  let convertedWords = [];
   if (arr.length == 0) {
-    return convertedWords;
+    return;
   }
-  convertedWords.push(`${arr[1]}er`);
-  return wordConverterThree(arr.length - 1);
+  convertedWords.push(`${arr[0]}er`);
+  arr.shift();
+  return wordConverterThree(arr);
 }
-console.log(wordConverterThree(words));
-*/
+wordConverterThree(words);
+console.log(convertedWords);
 console.log("------------- Solution End -------------");
