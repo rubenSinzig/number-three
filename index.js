@@ -22,14 +22,14 @@ const retirementAge = 65;
 const monthlySalary = 2000;
 const monthlySaveInPerc = 5;
 console.log("------------ Solution One ------------");
-const saveUntilRetirement = (age, pensionAge, salary, percent) => {
+const saveUntilRetirementOne = (age, pensionAge, salary, percent) => {
   if (age < pensionAge) {
     return (pensionAge - age) * (salary * 12 * (percent / 100));
   }
   return `You’re already retired!`;
 };
 console.log(
-  saveUntilRetirement(
+  saveUntilRetirementOne(
     currentAge,
     retirementAge,
     monthlySalary,
@@ -37,7 +37,28 @@ console.log(
   )
 );
 console.log("------------ Solution Two ------------");
-
+const saveUntilRetirementTwo = (...args) => {
+  const argsToArr = [...args];
+  //   console.log(argsToArr);
+  const saveSalary = argsToArr.reduce((acc, cur) => {
+    if (cur == currentAge) {
+      acc = retirementAge - cur;
+    }
+    if (cur == monthlySalary) {
+      acc *= 12 * ((cur * monthlySaveInPerc) / 100);
+    }
+    return acc;
+  }, 0);
+  return saveSalary;
+};
+console.log(
+  saveUntilRetirementTwo(
+    currentAge,
+    retirementAge,
+    monthlySalary,
+    monthlySaveInPerc
+  )
+);
 console.log("------------ Solution Three ------------");
 
 console.log("------------ Solution End ------------");
