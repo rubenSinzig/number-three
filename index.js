@@ -17,3 +17,27 @@
 // she saves the 5% of it.
 // How much money will she have saved until she retires?
 // Output: $30000
+const currentAge = 40;
+const retirementAge = 65;
+const monthlySalary = 2000;
+const monthlySaveInPerc = 5;
+console.log("------------ Solution One ------------");
+const saveUntilRetirement = (age, pensionAge, salary, percent) => {
+  if (age < pensionAge) {
+    return (pensionAge - age) * (salary * 12 * (percent / 100));
+  }
+  return `You’re already retired!`;
+};
+console.log(
+  saveUntilRetirement(
+    currentAge,
+    retirementAge,
+    monthlySalary,
+    monthlySaveInPerc
+  )
+);
+console.log("------------ Solution Two ------------");
+
+console.log("------------ Solution Three ------------");
+
+console.log("------------ Solution End ------------");
