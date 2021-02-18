@@ -43,4 +43,39 @@ const checkPhoneNumTwo = (str) => {
 };
 console.log(checkPhoneNumTwo(userStr));
 console.log("------------ Solution Three ------------");
+/*
+
+The solution is not finish because I have a problem in line 66 - 70.
+
+*/
+let phoneNum = [];
+const checkPhoneNumThree = (str) => {
+  if (str.length == 0) {
+    return;
+  }
+  const strToArr = str.trim().toLowerCase().split(" ");
+  switch (strToArr[0].slice(0, 3)) {
+    case "030":
+    case "017":
+      phoneNum.push(strToArr[0]);
+      break;
+    default:
+      break;
+  }
+  let phoneNumToStr = phoneNum.join("");
+  if (phoneNumToStr == "" && phoneNumToStr.length > 0) {
+    console.log(
+      `You don't enter a phone number or your phone number starts not with (030 or 017).`
+    );
+  }
+  if (phoneNumToStr.length == 10 && phoneNumToStr == parseInt(phoneNumToStr)) {
+    console.log(`${phoneNumToStr} is your phone number.`);
+  } else if (phoneNumToStr.length > 0) {
+    console.log(`${phoneNumToStr} is NOT a valid phone number.`);
+  }
+  strToArr.shift();
+  str = strToArr.join(" ");
+  return checkPhoneNumThree(str);
+};
+checkPhoneNumThree(userStr);
 console.log("------------ Solution End ------------");
