@@ -6,7 +6,7 @@
 //  Examples :
 // > phone("Hi, call me on 030221A398 "); -> This is not a valid phone number 030221A398
 // > phone("Hi my number is 038  "); -> This is not a valid phone number 038
-const userStr = " Hi, call me on 0302214398  ";
+const userStr = " Hi, call me on 0302614398  ";
 console.log("------------ Solution One ------------");
 const checkPhoneNumOne = (str) => {
   const strToArr = str.trim().toLowerCase().split(" ");
@@ -33,7 +33,7 @@ const checkPhoneNumTwo = (str) => {
     }
   }
   let findNumToStr = findPhoneNum.join("");
-  if (findPhoneNum == undefined) {
+  if (findNumToStr == "") {
     return `You don't enter a phone number or your phone number starts not with (030 or 017).`;
   } else if (findNumToStr.length == 10 && findNumToStr == +findPhoneNum) {
     return `${findPhoneNum} is your phone number.`;
