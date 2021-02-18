@@ -6,5 +6,4 @@
 
 3. **branch:** _pension_ [Solutions](https://github.com/rubenSinzig/number-three/blob/pension/index.js)
 
-5. **branch:** _phoneNumber_ [Solutions](https://github.com/rubenSinzig/number-three/blob/phoneNumber/index.js) 
-> _Third solution way with Recursion is not finsh_
+5. **branch:** _phoneNumber_ [Solutions](https://github.com/rubenSinzig/number-three/blob/phoneNumber/index.js) > _Third solution way with Recursion is not finsh_
